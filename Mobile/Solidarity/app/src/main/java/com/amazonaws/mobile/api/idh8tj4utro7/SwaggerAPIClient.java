@@ -56,4 +56,3 @@ public interface SwaggerAPIClient {
     Empty updatePut();
     
 }
-

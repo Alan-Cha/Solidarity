@@ -47,4 +47,5 @@ dependencies {
     compile('com.amazonaws:aws-android-sdk-ddb-mapper:2.3.3')
     compile('com.amazonaws:aws-android-sdk-apigateway-core:2.3.3')
     compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'com.google.android.gms:play-services:9.8.0'
 }

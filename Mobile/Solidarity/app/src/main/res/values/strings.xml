@@ -11,8 +11,17 @@
     <string name="title_activity_item_list">Item List</string>
     <string name="title_activity_main">@string/app_name</string>
     <string name="title_activity_sign_in">Sign-in</string>
+    <string name="title_activity_create_group">Create Group</string>
+    <string name="title_activity_join_group">Join Group</string>
     <string name="button_text_sign_in">SIGN IN</string>
     <string name="button_text_sign_out">SIGN OUT</string>
+    <string name="button_text_create">CREATE GROUP</string>
+    <string name="button_text_join">JOIN GROUP</string>
+    <string name="button_text_panic">PANIC</string>
+    <string name="login_group_id">group id</string>
+    <string name="login_group_password">password</string>
+    <string name="login_group_password_confirm">confirm password</string>
+    <string name="button_submit">submit</string>
     <string name="main_nav_menu_default_user_text">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
 
 </resources>
