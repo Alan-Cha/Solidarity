@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.solidarity.CreateGroupActivity">
+
+    <EditText
+        android:id="@+id/text_group_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:hint="@string/login_group_id"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/text_group_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/text_group_id"
+        android:hint="@string/login_group_password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/text_group_password_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/text_group_password"
+        android:hint="@string/login_group_password_confirm"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/text_group_password_confirm"
+        android:text="@string/button_submit"
+        android:onClick="submit" />
+
+</RelativeLayout>

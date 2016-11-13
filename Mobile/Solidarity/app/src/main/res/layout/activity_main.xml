@@ -28,6 +28,45 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="@string/button_text_create"
+            android:id="@+id/button_create"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_centerHorizontal="true"
+            android:onClick="createGroup"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="@string/button_text_join"
+            android:id="@+id/button_join"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="170dp"
+            android:layout_below="@id/button_create"
+            android:layout_centerHorizontal="true"
+            android:onClick="joinGroup"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:text="@string/button_text_panic"
+            android:textSize="22sp"
+            android:textColor="#ffffff"
+            android:background="#ff0000"
+            android:id="@+id/button_panic"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/button_join"
+            android:layout_centerHorizontal="true"
+            android:onClick="panic"/>
+
     </LinearLayout>
 
     <!-- navigation drawer -->

@@ -8,11 +8,17 @@
 //
 package com.solidarity;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.drive.Drive;
+import com.google.android.gms.location.LocationServices;
 import com.solidarity.R;
 import android.content.Context;
 import android.content.Intent;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -26,6 +32,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.amazonaws.mobile.AWSMobileClient;
 import com.amazonaws.mobile.user.IdentityManager;
@@ -34,7 +41,13 @@ import com.amazonaws.mobileconnectors.cognito.DefaultSyncCallback;
 import com.amazonaws.mobileconnectors.cognito.Record;
 import com.solidarity.NavigationDrawer;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, OnConnectionFailedListener {
+    /** user location **/
+    public static int location;
+
+    /** The Google API Client **/
+    private GoogleApiClient mGoogleApiClient;
+
     /** Class name for log messages. */
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
@@ -130,6 +143,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Obtain a reference to the identity manager.
         identityManager = awsMobileClient.getIdentityManager();
 
+        // Create GoogleAPIClient instance
+//        mGoogleApiClient = new GoogleApiClient.Builder(this)
+//            .enableAutoManage(this /* FragmentActivity */,
+//                    this /* OnConnectionFailedListener */)
+//            .addApi(Drive.API)
+//            .addScope(Drive.SCOPE_FILE)
+//            .addConnectionCallbacks((GoogleApiClient.ConnectionCallbacks) this)
+//            .addOnConnectionFailedListener(this)
+//            .build();
+
+//        mGoogleApiClient.connect();
+
         setContentView(R.layout.activity_main);
 
         setupToolbar(savedInstanceState);
@@ -223,19 +248,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onBackPressed();
     }
 
-    /**
-     * Stores data to be passed between fragments.
-     * @param fragmentBundle fragment data
-     */
-    public void setFragmentBundle(final Bundle fragmentBundle) {
-        this.fragmentBundle = fragmentBundle;
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        Toast.makeText(getBaseContext(), connectionResult.getErrorMessage(),
+                Toast.LENGTH_LONG).show();
     }
 
     /**
-     * Gets data to be passed between fragments.
-     * @return fragmentBundle fragment data
+     * Button triggers
      */
-    public Bundle getFragmentBundle() {
-        return this.fragmentBundle;
+    public void createGroup(View view) {
+        try {
+            Intent intent = new Intent(MainActivity.this, CreateGroupActivity.class);
+            startActivity(intent);
+        }
+        catch (Exception e) {
+            Toast.makeText(getBaseContext(), e.getMessage(),
+                    Toast.LENGTH_LONG).show();
+        }
     }
+
+    public void joinGroup(View view) {
+        try {
+            Intent intent = new Intent(MainActivity.this, JoinGroupActivity.class);
+            startActivity(intent);
+        }
+        catch (Exception e) {
+            Toast.makeText(getBaseContext(), e.getMessage(),
+                    Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void panic(View view) {
+
+    }
+
 }

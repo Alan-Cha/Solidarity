@@ -17,7 +17,7 @@
     <ImageView
         android:id="@+id/splashImage"
         android:scaleType="fitCenter"
-        android:src="@mipmap/splash_icon"
+        android:src="@mipmap/solidarity_launch_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

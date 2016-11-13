@@ -10,6 +10,7 @@ package com.solidarity;
 
 import com.solidarity.R;
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -52,6 +53,29 @@ public class SplashActivity extends Activity {
 
             Toast.makeText(SplashActivity.this, String.format("Sign-in with %s succeeded.",
                     provider.getDisplayName()), Toast.LENGTH_LONG).show();
+
+            // handles Cognito sign-in
+            AWSMobileClient.defaultMobileClient()
+                    .getIdentityManager()
+                    .getUserID(new IdentityManager.IdentityHandler() {
+
+                        @Override
+                        public void handleIdentityID(String identityId) {
+
+                            // We have successfully retrieved the user's identity. You can use the
+                            // user identity value to uniquely identify the user. For demonstration
+                            // purposes here, we will display the value in a text view.
+
+                            Toast.makeText(getBaseContext(), identityId,
+                                    Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void handleError(Exception exception) {
+                            Toast.makeText(getBaseContext(), exception.getMessage(),
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    });
 
             AWSMobileClient.defaultMobileClient()
                     .getIdentityManager()
