@@ -1,0 +1,108 @@
+!SESSION 2016-11-12 01:45:05.347 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/alancha/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/alancha/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-12 01:45:32.372
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:40.877
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:43.234
+!MESSAGE Failed to load credential profiles from (/Users/alancha/.aws/credentials).AWS credential profiles file not found in the given path: /Users/alancha/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:43.263
+!MESSAGE Monitoring content of /Users/alancha/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:43.390
+!MESSAGE AWS toolkit core plugin initialized after 2514 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:43.397
+!MESSAGE Failed to load credential profiles from (/Users/alancha/.aws/credentials).AWS credential profiles file not found in the given path: /Users/alancha/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:43.401
+!MESSAGE No account is configued in the toolkit. Bootstrapping the credentials file at (/Users/alancha/.aws/credentials).
+
+!ENTRY org.eclipse.ui.workbench 4 2 2016-11-12 01:45:43.409
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Executable extension definition for "class" not found.
+	at org.eclipse.core.internal.registry.ConfigurationElement.throwException(ConfigurationElement.java:62)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:222)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:291)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:286)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2016-11-12 01:45:43.411
+!MESSAGE Executable extension definition for "class" not found.
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2016-11-12 01:45:43.411
+!MESSAGE Executable extension definition for "class" not found.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:43.412
+!MESSAGE No profile found: default
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:43.413
+!MESSAGE The current accountId is not found in the system. Switching to the default account.
+
+!ENTRY org.eclipse.ui 4 0 2016-11-12 01:45:43.448
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'com.amazonaws.eclipse.elasticbeanstalk' plug-in.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Executable extension definition for "class" not found.
+	at org.eclipse.core.internal.registry.ConfigurationElement.throwException(ConfigurationElement.java:62)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:222)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:291)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:286)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2016-11-12 01:45:43.448
+!MESSAGE Executable extension definition for "class" not found.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:45:43.524
+!MESSAGE Initialized a new Cognito identity us-east-1:930bc7ee-b602-4aaf-bb25-43491565b31f
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-11-12 01:47:28.960
+!MESSAGE Switching to global default account
+
+!ENTRY com.amazonaws.eclipse.sdk.ui 1 0 2016-11-12 01:51:27.615
+!MESSAGE Downloading the SDK from CloudFront to location /var/folders/tr/ljhl5s9919q4w9f686k6n4x00000gn/T/aws-java-sdk1522755727501540336/sdk.zip
+
+!ENTRY com.amazonaws.eclipse.sdk.ui 1 0 2016-11-12 01:52:04.434
+!MESSAGE SDK download completes. Location: /var/folders/tr/ljhl5s9919q4w9f686k6n4x00000gn/T/aws-java-sdk1522755727501540336/sdk.zip, File-length: 210365684
+
+!ENTRY com.amazonaws.eclipse.sdk.ui 2 0 2016-11-12 02:15:45.682
+!MESSAGE Unable to initialize previous AWS SDK for Java classpath entries - defaulting to latest version
+!STACK 0
+java.lang.Exception: No SDK install directory specified
+	at com.amazonaws.eclipse.sdk.ui.classpath.ClasspathContainerInitializer.initialize(ClasspathContainerInitializer.java:52)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2939)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1970)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3424)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.CPListElement.create(CPListElement.java:594)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.CPListElement.create(CPListElement.java:579)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.BuildPathsBlock.getCPListElements(BuildPathsBlock.java:424)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.BuildPathsBlock.init(BuildPathsBlock.java:327)
+	at org.eclipse.jdt.ui.wizards.JavaCapabilityConfigurationPage.init(JavaCapabilityConfigurationPage.java:152)
+	at org.eclipse.jdt.ui.wizards.NewJavaProjectWizardPageTwo.initializeBuildPath(NewJavaProjectWizardPageTwo.java:313)
+	at org.eclipse.jdt.ui.wizards.NewJavaProjectWizardPageTwo.updateProject(NewJavaProjectWizardPageTwo.java:247)
+	at org.eclipse.jdt.ui.wizards.NewJavaProjectWizardPageTwo.performFinish(NewJavaProjectWizardPageTwo.java:479)
+	at com.amazonaws.eclipse.lambda.project.wizard.NewLambdaJavaFunctionProjectWizard.finishPage(NewLambdaJavaFunctionProjectWizard.java:77)
+	at org.eclipse.jdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:120)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5521)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:105)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
